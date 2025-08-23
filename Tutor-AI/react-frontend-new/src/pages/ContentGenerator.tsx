@@ -100,20 +100,20 @@ const ContentGenerator: React.FC = () => {
     <div className="space-y-8">
       <div className="flex items-center space-x-3 mb-6">
         <BookOpen className="h-8 w-8 text-primary-600" />
-        <h1 className="text-3xl font-bold text-gray-900">Content Generator</h1>
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Content Generator</h1>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Input Form */}
         <div className="card">
-          <h2 className="text-xl font-semibold text-gray-900 mb-6 flex items-center">
+          <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-6 flex items-center">
             <Target className="h-5 w-5 mr-2 text-primary-600" />
             Generate Educational Content
           </h2>
 
           <div className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">
                 Topic *
               </label>
               <input
@@ -127,7 +127,7 @@ const ContentGenerator: React.FC = () => {
 
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">
                   Subject
                 </label>
                 <select
@@ -142,7 +142,7 @@ const ContentGenerator: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">
                   Difficulty
                 </label>
                 <select
@@ -158,7 +158,7 @@ const ContentGenerator: React.FC = () => {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">
                 Content Type
               </label>
               <select
@@ -173,7 +173,7 @@ const ContentGenerator: React.FC = () => {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">
                 Learning Objectives (Optional)
               </label>
               <textarea
@@ -204,7 +204,7 @@ const ContentGenerator: React.FC = () => {
             </button>
 
             {error && (
-              <div className="p-3 bg-red-50 border border-red-200 rounded-md text-red-700 text-sm">
+              <div className="p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-md text-red-700 dark:text-red-400 text-sm">
                 {error}
               </div>
             )}
@@ -216,31 +216,31 @@ const ContentGenerator: React.FC = () => {
           {generatedContent && (
             <>
               <div className="card">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Generated Content</h3>
-                <div className="prose prose-sm max-w-none">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Generated Content</h3>
+                <div className="prose prose-sm max-w-none dark:prose-invert">
                   <div dangerouslySetInnerHTML={{ __html: generatedContent.content.replace(/\n/g, '<br/>') }} />
                 </div>
               </div>
 
               <div className="card">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Key Concepts</h3>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Key Concepts</h3>
                 <div className="space-y-2">
                   {generatedContent.keyConcepts.map((concept, index) => (
                     <div key={index} className="flex items-center space-x-2">
                       <div className="w-2 h-2 bg-primary-600 rounded-full"></div>
-                      <span className="text-gray-700">{concept}</span>
+                      <span className="text-gray-700 dark:text-gray-200">{concept}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div className="card">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Learning Objectives</h3>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Learning Objectives</h3>
                 <div className="space-y-2">
                   {generatedContent.learningObjectives.map((objective, index) => (
                     <div key={index} className="flex items-start space-x-2">
                       <div className="w-2 h-2 bg-green-600 rounded-full mt-2"></div>
-                      <span className="text-gray-700">{objective}</span>
+                      <span className="text-gray-700 dark:text-gray-200">{objective}</span>
                     </div>
                   ))}
                 </div>
@@ -272,11 +272,11 @@ const ContentGenerator: React.FC = () => {
           )}
 
           {!generatedContent && !isGenerating && (
-            <div className="card bg-gray-50 border-dashed border-2 border-gray-300">
+            <div className="card bg-gray-50 dark:bg-gray-800/50 border-dashed border-2 border-gray-300 dark:border-gray-600">
               <div className="text-center py-12">
-                <BookOpen className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-                <h3 className="text-lg font-medium text-gray-900 mb-2">No Content Generated Yet</h3>
-                <p className="text-gray-500">
+                <BookOpen className="h-12 w-12 text-gray-400 dark:text-gray-500 mx-auto mb-4" />
+                <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">No Content Generated Yet</h3>
+                <p className="text-gray-500 dark:text-gray-400">
                   Fill out the form and click "Generate Content" to create educational materials.
                 </p>
               </div>
