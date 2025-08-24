@@ -258,10 +258,6 @@ Multi-Agent-AI-Tutoring-System/
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🙏 Acknowledgments
 
 - **Google Gemini AI** for powerful content generation
@@ -273,8 +269,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support
 
 - **Issues**: [GitHub Issues](https://github.com/Man0dya/Multi-Agent-AI-Tutoring-System/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/Man0dya/Multi-Agent-AI-Tutoring-System/discussions)
-- **Wiki**: [Project Wiki](https://github.com/Man0dya/Multi-Agent-AI-Tutoring-System/wiki)
 
 ## 🌟 Star History
 
@@ -285,3 +279,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Built with ❤️ by the Multi-Agent AI Tutoring System Team**
 
 *Empowering education through intelligent AI agents*
+
